@@ -1,0 +1,21 @@
+{
+    "name": "Paired T-Test",
+    "sim_name": [
+        "AS_Pareto_Mc_upp",
+        "SEIFA13"
+    ],
+    "obs_name": "ISC Bulletin - gCMT",
+    "obs_catalog_repr": "",
+    "quantile": [
+        0.4701169451831921,
+        1.967645928777568
+    ],
+    "observed_statistic": 0.021356375627794754,
+    "test_distribution": [
+        -0.06802943781294402,
+        0.11074218906853353
+    ],
+    "status": "normal",
+    "min_mw": 4.7,
+    "type": "EvaluationResult"
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Poisson N-Test",
+    "sim_name": "AS_TGR_mid_Mmax_upp",
+    "obs_name": "ISC Bulletin - gCMT",
+    "obs_catalog_repr": "",
+    "quantile": [
+        0.21006030803447817,
+        0.8060294701136428
+    ],
+    "observed_statistic": 311,
+    "test_distribution": [
+        "poisson",
+        296.6737276000369
+    ],
+    "status": "normal",
+    "min_mw": 4.7,
+    "type": "EvaluationResult"
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Paired T-Test",
+    "sim_name": [
+        "FSBG_SRA_ML",
+        "SEIFA13"
+    ],
+    "obs_name": "ISC Bulletin - gCMT",
+    "obs_catalog_repr": "",
+    "quantile": [
+        5.10467658579866,
+        1.967645928777568
+    ],
+    "observed_statistic": 0.24557210920392594,
+    "test_distribution": [
+        0.1509140142639454,
+        0.3402302041439065
+    ],
+    "status": "normal",
+    "min_mw": 4.7,
+    "type": "EvaluationResult"
+}
