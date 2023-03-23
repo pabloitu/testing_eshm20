@@ -1,0 +1,18 @@
+{
+    "name": "Poisson N-Test",
+    "sim_name": "AS_Pareto_Mc_mid",
+    "obs_name": "ISC Bulletin - gCMT",
+    "obs_catalog_repr": "",
+    "quantile": [
+        0.9085902357248867,
+        0.10095673430172075
+    ],
+    "observed_statistic": 311,
+    "test_distribution": [
+        "poisson",
+        334.7394552638741
+    ],
+    "status": "normal",
+    "min_mw": 4.7,
+    "type": "EvaluationResult"
+}

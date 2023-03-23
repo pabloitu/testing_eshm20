@@ -1,0 +1,18 @@
+{
+    "name": "Poisson N-Test",
+    "sim_name": "SEIFA13",
+    "obs_name": "ISC Bulletin - gCMT",
+    "obs_catalog_repr": "",
+    "quantile": [
+        0.9863677798739093,
+        0.015688944602289288
+    ],
+    "observed_statistic": 312,
+    "test_distribution": [
+        "poisson",
+        352.27955179930115
+    ],
+    "status": "normal",
+    "min_mw": 4.7,
+    "type": "EvaluationResult"
+}

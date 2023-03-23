@@ -1,0 +1,21 @@
+{
+    "name": "Paired T-Test",
+    "sim_name": [
+        "AS_TGR_hi_Mmax_upp",
+        "SEIFA13"
+    ],
+    "obs_name": "ISC Bulletin - gCMT",
+    "obs_catalog_repr": "",
+    "quantile": [
+        -0.49234584310665336,
+        1.967645928777568
+    ],
+    "observed_statistic": -0.022468908999024432,
+    "test_distribution": [
+        -0.1122652542612043,
+        0.06732743626315545
+    ],
+    "status": "normal",
+    "min_mw": 4.7,
+    "type": "EvaluationResult"
+}
