@@ -3,7 +3,19 @@
       format: csep
       db_type: hdf5
       filename: seifa_model.csv
-- FSBG:
+- FSBG13:
+      path: models/SEIFA_13
+      format: csep
+      db_type: hdf5
+      filename: seifa_model.csv
+- AS13:
+      path: models/SEIFA_13
+      format: csep
+      db_type: hdf5
+      filename: seifa_model.csv
+
+
+- FSBG20:
     path: models/FSBG
     format: csep
     db_type: hdf5
