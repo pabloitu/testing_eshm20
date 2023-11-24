@@ -1,48 +1,36 @@
 - SEIFA13:
-      path: models/SEIFA_13
+      path: models/ESHM13
       format: csep
       db_type: hdf5
-      filename: seifa_model.csv
-- FSBG13:
-      path: models/SEIFA_13
-      format: csep
-      db_type: hdf5
-      filename: seifa_model.csv
-- AS13:
-      path: models/SEIFA_13
-      format: csep
-      db_type: hdf5
-      filename: seifa_model.csv
-
-
-- FSBG20:
+      filename: seifa.csv
+- FSBG:
     path: models/FSBG
     format: csep
     db_type: hdf5
     flavours:
-        SRU_MU: fs_ver09e_model_aGR_SRU_MU_fMthr.csv
-        SRU_ML: fs_ver09e_model_aGR_SRU_ML_fMthr.csv
-        SRU_MA: fs_ver09e_model_aGR_SRU_MA_fMthr.csv
-        SRL_MU: fs_ver09e_model_aGR_SRL_MU_fMthr.csv
-        SRL_ML: fs_ver09e_model_aGR_SRL_ML_fMthr.csv
-        SRL_MA: fs_ver09e_model_aGR_SRL_MA_fMthr.csv
-        SRA_MU: fs_ver09e_model_aGR_SRA_MU_fMthr.csv
-        SRA_ML: fs_ver09e_model_aGR_SRA_ML_fMthr.csv
-        SRA_MA: fs_ver09e_model_aGR_SRA_MA_fMthr.csv
+        SRU_MU: fs_SRU_MU.csv
+        SRU_ML: fs_SRU_ML.csv
+        SRU_MA: fs_SRU_MA.csv
+        SRL_MU: fs_SRL_MU.csv
+        SRL_ML: fs_SRL_ML.csv
+        SRL_MA: fs_SRL_MA.csv
+        SRA_MU: fs_SRA_MU.csv
+        SRA_ML: fs_SRA_ML.csv
+        SRA_MA: fs_SRA_MA.csv
 - AS:
     path: models/AS
     format: csep
     db_type: hdf5
     flavours:
-        Pareto_Mc_upp: asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_upp.csv
-        Pareto_Mc_mid: asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_mid.csv
-        Pareto_Mc_low: asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_low.csv
-        TGR_mid_Mmax_upp: asm_ver12e_winGT_fs017_mid_abgrs_maxmag_upp.csv
-        TGR_mid_Mmax_mid: asm_ver12e_winGT_fs017_mid_abgrs_maxmag_mid.csv
-        TGR_mid_Mmax_low: asm_ver12e_winGT_fs017_mid_abgrs_maxmag_low.csv
-        TGR_lo_Mmax_upp: asm_ver12e_winGT_fs017_lo_abgrs_maxmag_upp.csv
-        TGR_lo_Mmax_mid: asm_ver12e_winGT_fs017_lo_abgrs_maxmag_mid.csv
-        TGR_lo_Mmax_low: asm_ver12e_winGT_fs017_lo_abgrs_maxmag_low.csv
-        TGR_hi_Mmax_upp: asm_ver12e_winGT_fs017_hi_abgrs_maxmag_upp.csv
-        TGR_hi_Mmax_mid: asm_ver12e_winGT_fs017_hi_abgrs_maxmag_mid.csv
-        TGR_hi_Mmax_low: asm_ver12e_winGT_fs017_hi_abgrs_maxmag_low.csv
+        Pareto_Mc_upp: PM_MU.csv
+        Pareto_Mc_mid: PM_MC.csv
+        Pareto_Mc_low: PM_ML.csv
+        TGR_mid_Mmax_upp: ABM_MU.csv
+        TGR_mid_Mmax_mid: ABM_MC.csv
+        TGR_mid_Mmax_low: ABM_ML.csv
+        TGR_lo_Mmax_upp: ABL_MU.csv
+        TGR_lo_Mmax_mid: ABL_MC.csv
+        TGR_lo_Mmax_low: ABL_ML.csv
+        TGR_hi_Mmax_upp: ABU_MU.csv
+        TGR_hi_Mmax_mid: ABU_MC.csv
+        TGR_hi_Mmax_low: ABU_ML.csv

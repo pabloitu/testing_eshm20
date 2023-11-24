@@ -4,7 +4,7 @@ end_date: 2022-1-1T00:00:00
 intervals: 1
 catalog_reader: query_isc_gcmt
 mag_min: 4.7
-mag_max: 8.7
+mag_max: 8.3
 mag_bin: 0.2
 depth_min: -2
 depth_max: 30
