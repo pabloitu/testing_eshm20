@@ -1,8 +1,15 @@
-name: fecsep-efehr20
+name: floatexp_eshm20
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.10
   - pycsep=0.6.2
-  - floatcsep=0.1.4
+  - pandas
+  - geopandas
+  - matplotlib
+  - cartopy
+  - shapely
+  - pip:
+      - "--editable=git+https://github.com/cseptesting/hazard2csep.git@main#egg=hazard2csep"
+      - "--editable=git+https://github.com/cseptesting/floatcsep.git@main#egg=floatcsep"

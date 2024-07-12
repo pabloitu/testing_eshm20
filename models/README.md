@@ -4,10 +4,10 @@
 This environment should be run with conda, outside the top `floatcsep` environment. If you do not have conda installed, please follow the instructions [here](https://docs.conda.io/en/latest/miniconda.html). 
 
 ```shell
-git clone git@github.com:cseptesting/oq2csep.git --depth=1 --branch=main 
-rm -rf ./oq2csep/.git
+git clone git@github.com:cseptesting/hazard2csep.git --depth=1 --branch=main 
+rm -rf ./hazard2csep/.git
 # todo change name from oq2csep to hazard2csep 
-cd oq2csep
+cd hazard2csep
 conda env create -f environment.yml
 conda activate hazard2csep
 pip install -e .

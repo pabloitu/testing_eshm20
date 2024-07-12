@@ -9,6 +9,9 @@ dir_script = dirname(__file__)
 if __name__ == '__main__':
 
     region = join(dir_script, 'regions', 'region_final.txt')
+    buffer_file = join(dir_script, 'eshm20', 'input_shapefiles',
+                       'eshm20_input_h_simple_individual_buffer',
+                       'eshm20_individual_buffer.shp')
 
     output_dir = join(dir_script, 'forecasts')
     os.makedirs(output_dir, exist_ok=True)
@@ -22,7 +25,7 @@ if __name__ == '__main__':
         branch = [join(eshm13_branches[0], i) for i in branch_path]
         main.project(branch,
                      projection_region=region,
-                     dm=0.1,
+                     dm=0.2,
                      min_mag=4.7, max_mag=8.9,
                      max_depth=30,
                      dest=join(output_dir, branch_names[i] + '.csv'),
@@ -38,9 +41,10 @@ if __name__ == '__main__':
         branch = [join(eshm20_dir, i) for i in model_paths]
         main.project(branch,
                      projection_region=region,
-                     dm=0.1,
-                     min_mag=4.7, max_mag=8.9,
+                     dm=0.2,
+                     min_mag=4.7, max_mag=9.1,
                      max_depth=30,
+                     buffer=buffer_file,
                      dest=join(output_dir, key + '.csv'),
                      plot=True)
 

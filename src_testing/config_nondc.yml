@@ -1,0 +1,27 @@
+name: europe
+rundir: run_nondeclustered
+time_config:
+  start_date: 2014-1-1T00:00:00
+  end_date: 2022-1-1T00:00:00
+
+catalog: ../catalogs/EMEC.csv
+
+region_config:
+  region: region_final.txt
+  mag_min: 4.7
+  mag_max: 9.1
+  mag_bin: 0.2
+  depth_min: -2
+  depth_max: 30
+model_config: models.yml
+test_config: tests.yml
+postproc_config:
+  plot_catalog:
+    region_border: False
+  plot_forecasts:
+    region_border: False
+    basemap: ESRI_terrain
+    clabel: $\lambda(x)$ ($M\geq 4.7$ events/cell/yr)
+    clabel_fontsize: 14
+    cticks_fontsize: 12
+    alpha_exp: 0.8

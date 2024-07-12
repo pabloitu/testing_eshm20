@@ -1,12 +1,7 @@
 - SEIFA13:
-      path: models/ESHM13
-      format: csep
-      db_type: hdf5
-      filename: seifa.csv
+      path: ../models/forecasts/eshm13_seifa.csv
 - FSBG:
-    path: models/FSBG
-    format: csep
-    db_type: hdf5
+    path: ../models/forecasts
     flavours:
         SRU_MU: fs_SRU_MU.csv
         SRU_ML: fs_SRU_ML.csv
@@ -18,9 +13,7 @@
         SRA_ML: fs_SRA_ML.csv
         SRA_MA: fs_SRA_MA.csv
 - AS:
-    path: models/AS
-    format: csep
-    db_type: hdf5
+    path: ../models/forecasts
     flavours:
         Pareto_Mc_upp: PM_MU.csv
         Pareto_Mc_mid: PM_MC.csv

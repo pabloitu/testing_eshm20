@@ -37,27 +37,31 @@ if __name__ == '__main__':
 
     output_dir = join(dir_script, 'regions')
     os.makedirs(output_dir, exist_ok=True)
+    buffer_file = join(dir_script, 'eshm20', 'input_shapefiles',
+                       'eshm20_input_h_simple_individual_buffer',
+                       'eshm20_individual_buffer.shp')
 
     reg_eshm13_as = join(output_dir, 'region_eshm13_as.txt')
     reg_eshm13_fsbg = join(output_dir,'region_eshm13_fsbg.txt')
     reg_eshm13_seifa = join(output_dir, 'region_eshm13_seifa.txt')
     reg_eshm13 = join(output_dir, 'region_eshm2013.txt')
 
-    main.region(ESHM13_PATH['as'], dest=reg_eshm13_as,
-                plot=True, fill=True)
-    main.region(ESHM13_PATH['fsbg'], dest=reg_eshm13_fsbg,
-                plot=True, fill=True)
-    main.region(ESHM13_PATH['seifa'], dest=reg_eshm13_seifa,
-                plot=True,fill=True)
-    main.intersect([reg_eshm13_fsbg, reg_eshm13_as, reg_eshm13_seifa],
-                   dest=reg_eshm13, plot=True)
+    # main.region(ESHM13_PATH['as'], dest=reg_eshm13_as,
+    #             plot=True, fill=True)
+    # main.region(ESHM13_PATH['fsbg'], dest=reg_eshm13_fsbg,
+    #             plot=True, fill=True)
+    # main.region(ESHM13_PATH['seifa'], dest=reg_eshm13_seifa,
+    #             plot=True,fill=True)
+    # main.intersect([reg_eshm13_fsbg, reg_eshm13_as, reg_eshm13_seifa],
+    #                dest=reg_eshm13, plot=True)
 
     reg_eshm20_as = join(output_dir, 'region_eshm20_as.txt')
     reg_eshm20_fsbg = join(output_dir, 'region_eshm20_fsbg.txt')
     reg_eshm20 = join(output_dir, 'region_eshm20.txt')
-    main.region(ESHM20_PATH['as'], dest=reg_eshm20_as, plot=True,
-                fill=True)
+    # main.region(ESHM20_PATH['as'], dest=reg_eshm20_as, plot=True,
+    #             fill=True)
     main.region(ESHM20_PATH['fsbg'], dest=reg_eshm20_fsbg, plot=True,
+                fault_buffer=buffer_file,
                 fill=True)
     main.intersect([reg_eshm20_as, reg_eshm20_fsbg],
                    dest=reg_eshm20, plot=True)
