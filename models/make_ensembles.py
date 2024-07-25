@@ -28,7 +28,7 @@ srl = 0.1
 sra = 0.5
 sru = 0.4
 
-weights = [('ABL_ML.csv', uas*tr*abl*ml),
+lt_eshm20 = [('ABL_ML.csv', uas*tr*abl*ml),
            ('ABL_MC.csv', uas*tr*abl*ma),
            ('ABL_MU.csv', uas*tr*abl*mu),
            ('ABM_ML.csv', uas*tr*abm*ml),
@@ -61,6 +61,18 @@ for i in eshm13_data:
     rates_ += i[0] * i[1]
 
 eshm13 = csep.forecasts.GriddedForecast(data=rates_, region=model.region, magnitudes=model.magnitudes)
-eshm13.plot()
+eshm13.plot(show=True)
 
 
+
+
+eshm20_data = []
+for comp in lt_eshm20:
+    model = hazard2csep.forecast_lib.read_forecast(join('forecasts', comp[0]))
+    eshm20_data.append((model.data, comp[1]))
+rates_ = np.zeros(eshm20_data[0][0].shape)
+for i in eshm20_data:
+    rates_ += i[0] * i[1]
+
+eshm20 = csep.forecasts.GriddedForecast(data=rates_, region=model.region, magnitudes=model.magnitudes)
+eshm20.plot(show=True)

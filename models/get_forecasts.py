@@ -26,7 +26,7 @@ if __name__ == '__main__':
         main.project(branch,
                      projection_region=region,
                      dm=0.2,
-                     min_mag=4.7, max_mag=8.9,
+                     min_mag=4.9, max_mag=9.1,
                      max_depth=30,
                      dest=join(output_dir, branch_names[i] + '.csv'),
                      plot=True)
@@ -42,7 +42,7 @@ if __name__ == '__main__':
         main.project(branch,
                      projection_region=region,
                      dm=0.2,
-                     min_mag=4.7, max_mag=9.1,
+                     min_mag=4.9, max_mag=9.1,
                      max_depth=30,
                      buffer=buffer_file,
                      dest=join(output_dir, key + '.csv'),

@@ -6,7 +6,6 @@ This environment should be run with conda, outside the top `floatcsep` environme
 ```shell
 git clone git@github.com:cseptesting/hazard2csep.git --depth=1 --branch=main 
 rm -rf ./hazard2csep/.git
-# todo change name from oq2csep to hazard2csep 
 cd hazard2csep
 conda env create -f environment.yml
 conda activate hazard2csep
