@@ -1,5 +1,7 @@
+import numpy as np
+from os.path import join
 import csep
-import oq2csep
+import hazard2csep
 import os
 
 
@@ -49,5 +51,16 @@ weights = [('ABL_ML.csv', uas*tr*abl*ml),
            ('fs_SRU_MU.csv', fssm*sru*mu)]
 
 
-# for comp in lt_eshm13:
-#     oq2csep.(comp[0], comp[1])
+eshm13_data = []
+for comp in lt_eshm13:
+    model = hazard2csep.forecast_lib.read_forecast(join('forecasts', comp[0]))
+    eshm13_data.append((model.data, comp[1]))
+
+rates_ = np.zeros(eshm13_data[0][0].shape)
+for i in eshm13_data:
+    rates_ += i[0] * i[1]
+
+eshm13 = csep.forecasts.GriddedForecast(data=rates_, region=model.region, magnitudes=model.magnitudes)
+eshm13.plot()
+
+
