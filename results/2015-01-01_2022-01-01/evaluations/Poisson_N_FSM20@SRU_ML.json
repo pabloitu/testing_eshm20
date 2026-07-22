@@ -1,0 +1,18 @@
+{
+    "name": "Poisson N-Test",
+    "sim_name": "FSM20@SRU_ML",
+    "obs_name": "catalog",
+    "obs_catalog_repr": "",
+    "quantile": [
+        0.993402181973434,
+        0.008061383452409568
+    ],
+    "observed_statistic": 180,
+    "test_distribution": [
+        "poisson",
+        214.9607393286224
+    ],
+    "status": "normal",
+    "min_mw": 4.9,
+    "type": "EvaluationResult"
+}

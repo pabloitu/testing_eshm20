@@ -1,0 +1,18 @@
+{
+    "name": "Poisson N-Test",
+    "sim_name": "SEIFA13",
+    "obs_name": "catalog",
+    "obs_catalog_repr": "",
+    "quantile": [
+        0.39128800137688047,
+        0.637118482768014
+    ],
+    "observed_statistic": 180,
+    "test_distribution": [
+        "poisson",
+        175.99367481687474
+    ],
+    "status": "normal",
+    "min_mw": 4.9,
+    "type": "EvaluationResult"
+}

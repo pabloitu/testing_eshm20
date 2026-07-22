@@ -1,0 +1,18 @@
+{
+    "name": "Poisson N-Test",
+    "sim_name": "ASM20@Pareto_Mc_low",
+    "obs_name": "catalog",
+    "obs_catalog_repr": "",
+    "quantile": [
+        0.9996246693671297,
+        0.0004854567976859857
+    ],
+    "observed_statistic": 180,
+    "test_distribution": [
+        "poisson",
+        228.69891519335985
+    ],
+    "status": "normal",
+    "min_mw": 4.9,
+    "type": "EvaluationResult"
+}

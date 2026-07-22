@@ -1,0 +1,22 @@
+{
+    "name": "Paired T-Test",
+    "sim_name": [
+        "FSBG13",
+        "SEIFA13"
+    ],
+    "obs_name": "catalog",
+    "obs_catalog_repr": "",
+    "quantile": [
+        -10.290296004560675,
+        1.9733054338414737,
+        0.05
+    ],
+    "observed_statistic": -0.9974805439490632,
+    "test_distribution": [
+        -1.1887611229191402,
+        -0.8061999649789863
+    ],
+    "status": "normal",
+    "min_mw": 4.9,
+    "type": "EvaluationResult"
+}

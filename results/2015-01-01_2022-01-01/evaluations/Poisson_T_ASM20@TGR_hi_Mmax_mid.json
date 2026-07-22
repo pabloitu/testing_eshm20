@@ -1,0 +1,22 @@
+{
+    "name": "Paired T-Test",
+    "sim_name": [
+        "ASM20@TGR_hi_Mmax_mid",
+        "SEIFA13"
+    ],
+    "obs_name": "catalog",
+    "obs_catalog_repr": "",
+    "quantile": [
+        1.081886760697294,
+        1.9733054338414737,
+        0.05
+    ],
+    "observed_statistic": 0.06269188616833418,
+    "test_distribution": [
+        -0.051654868157425066,
+        0.17703864049409343
+    ],
+    "status": "normal",
+    "min_mw": 4.9,
+    "type": "EvaluationResult"
+}

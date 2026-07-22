@@ -1,0 +1,18 @@
+{
+    "name": "Poisson N-Test",
+    "sim_name": "ASM20@TGR_hi_Mmax_low",
+    "obs_name": "catalog",
+    "obs_catalog_repr": "",
+    "quantile": [
+        0.12458524373968927,
+        0.890275817187444
+    ],
+    "observed_statistic": 180,
+    "test_distribution": [
+        "poisson",
+        164.66224034174894
+    ],
+    "status": "normal",
+    "min_mw": 4.9,
+    "type": "EvaluationResult"
+}

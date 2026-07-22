@@ -1,0 +1,22 @@
+{
+    "name": "Paired T-Test",
+    "sim_name": [
+        "FSM20@SRL_MU",
+        "SEIFA13"
+    ],
+    "obs_name": "catalog",
+    "obs_catalog_repr": "",
+    "quantile": [
+        2.4913299170659124,
+        1.9733054338414737,
+        0.05
+    ],
+    "observed_statistic": 0.16561525648536274,
+    "test_distribution": [
+        0.0344365300907046,
+        0.2967939828800209
+    ],
+    "status": "normal",
+    "min_mw": 4.9,
+    "type": "EvaluationResult"
+}

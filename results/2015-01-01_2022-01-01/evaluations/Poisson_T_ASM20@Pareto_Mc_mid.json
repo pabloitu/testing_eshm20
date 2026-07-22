@@ -1,0 +1,22 @@
+{
+    "name": "Paired T-Test",
+    "sim_name": [
+        "ASM20@Pareto_Mc_mid",
+        "SEIFA13"
+    ],
+    "obs_name": "catalog",
+    "obs_catalog_repr": "",
+    "quantile": [
+        0.8522318329751334,
+        1.9733054338414737,
+        0.05
+    ],
+    "observed_statistic": 0.04906341838198982,
+    "test_distribution": [
+        -0.06454077516007789,
+        0.16266761192405751
+    ],
+    "status": "normal",
+    "min_mw": 4.9,
+    "type": "EvaluationResult"
+}
