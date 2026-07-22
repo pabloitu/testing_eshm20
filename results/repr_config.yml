@@ -1,0 +1,294 @@
+name: ESHM20 Testing
+config_file: config.yml
+path: ..
+run_dir: results
+time_config:
+  start_date: 2015-01-01 00:00:00
+  end_date: 2022-01-01 00:00:00
+  exp_class: ti
+  time_windows:
+  - - 2015-01-01 00:00:00
+    - 2022-01-01 00:00:00
+region_config:
+  region: region_europe.txt
+  mag_min: 4.9
+  mag_max: 8.9
+  mag_bin: 0.2
+  depth_min: -2
+  depth_max: 70
+  depths:
+  - -2.0
+  - 70.0
+  magnitudes:
+  - 4.9
+  - 5.1
+  - 5.3
+  - 5.5
+  - 5.7
+  - 5.9
+  - 6.1
+  - 6.3
+  - 6.5
+  - 6.7
+  - 6.9
+  - 7.1
+  - 7.3
+  - 7.5
+  - 7.7
+  - 7.9
+  - 8.1
+  - 8.3
+  - 8.5
+  - 8.7
+  - 8.9
+catalog: emec_catalog.json
+models:
+- SEIFA13:
+    doi: 10.1007/s10518-015-9795-1
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_13/seifa_2013.csv
+- FSBG13:
+    doi: 10.1007/s10518-015-9795-1
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_13/fsbg_2013.csv
+- ASM13:
+    doi: 10.1007/s10518-015-9795-1
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_13/asm_2013.csv
+- FSM20@SRU_MU:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/fs_ver09e_model_aGR_SRU_MU_fMthr.csv
+- FSM20@SRU_ML:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/fs_ver09e_model_aGR_SRU_ML_fMthr.csv
+- FSM20@SRU_MA:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/fs_ver09e_model_aGR_SRU_MA_fMthr.csv
+- FSM20@SRL_MU:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/fs_ver09e_model_aGR_SRL_MU_fMthr.csv
+- FSM20@SRL_ML:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/fs_ver09e_model_aGR_SRL_ML_fMthr.csv
+- FSM20@SRL_MA:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/fs_ver09e_model_aGR_SRL_MA_fMthr.csv
+- FSM20@SRA_MU:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/fs_ver09e_model_aGR_SRA_MU_fMthr.csv
+- FSM20@SRA_ML:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/fs_ver09e_model_aGR_SRA_ML_fMthr.csv
+- FSM20@SRA_MA:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/fs_ver09e_model_aGR_SRA_MA_fMthr.csv
+- ASM20@Pareto_Mc_upp:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_upp.csv
+- ASM20@Pareto_Mc_mid:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_mid.csv
+- ASM20@Pareto_Mc_low:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_low.csv
+- ASM20@TGR_mid_Mmax_upp:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_mid_abgrs_maxmag_upp.csv
+- ASM20@TGR_mid_Mmax_mid:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_mid_abgrs_maxmag_mid.csv
+- ASM20@TGR_mid_Mmax_low:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_mid_abgrs_maxmag_low.csv
+- ASM20@TGR_lo_Mmax_upp:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_lo_abgrs_maxmag_upp.csv
+- ASM20@TGR_lo_Mmax_mid:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_lo_abgrs_maxmag_mid.csv
+- ASM20@TGR_lo_Mmax_low:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_lo_abgrs_maxmag_low.csv
+- ASM20@TGR_hi_Mmax_upp:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_hi_abgrs_maxmag_upp.csv
+- ASM20@TGR_hi_Mmax_mid:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_hi_abgrs_maxmag_mid.csv
+- ASM20@TGR_hi_Mmax_low:
+    doi: 10.12686/a15
+    fmt: csv
+    forecast_unit: 1
+    path: eshm_20/asm_ver12e_winGT_fs017_hi_abgrs_maxmag_low.csv
+tests:
+- Poisson_N:
+    func: csep.core.poisson_evaluations.number_test
+    plot_func:
+    - csep.plots.plot_consistency_test:
+        plot_args:
+          code: "import numpy\nimport matplotlib.ticker as tick\nfrom matplotlib.lines\
+            \ import Line2D\nimport seaborn\nimport matplotlib.pyplot as\
+            \ plt\nseaborn.set_style(\"white\", {\"axes.facecolor\": \"\
+            .9\", 'font.family': 'Ubuntu'})\nplt.rcParams.update({'xtick.bottom':\
+            \ True, 'axes.labelweight': 'bold',\n                     'xtick.labelsize':\
+            \ 8, 'ytick.labelsize': 8,\n                     'legend.fontsize':\
+            \ 9})\nax.axvline(results[0].observed_statistic, color='black',\
+            \ linewidth=1, linestyle='--')\nax.text(results[0].observed_statistic\
+            \ + 30, len(results) - 4.8, 'Events in 7 yrs.', rotation=90)\n\
+            ax.set_xlim([0, ax.get_xlim()[1]])\nfor i, j in enumerate(results):\n\
+            \    ax.plot(j.test_distribution[1], len(results) - i - 1, 'ko',\
+            \ markersize=4)\nax.xaxis.set_major_locator(tick.MaxNLocator(integer=True))\n\
+            legend_elements = [Line2D([0], [0], marker='o', lw=0, label='Mean\
+            \ rate', color='k', markersize=5),\n                   Line2D([0],\
+            \ [0], color='k', lw=1, label='95% conf.'),\n              \
+            \     Line2D([0], [1], color='k', ls='--', lw=1, label='Obs.\
+            \ events')]\nax.legend(handles=legend_elements, loc='lower right')\n"
+        plot_kwargs:
+          title: $\mathcal{N}$-test
+          title_fontsize: 16
+          figsize:
+          - 5
+          - 6
+          xlabel: Event counts
+          linewidth: 0.5
+          capsize: 0
+- Poisson_S:
+    func_kwargs:
+      seed: 23
+      num_simulations: 1000
+    func: csep.core.poisson_evaluations.spatial_test
+    plot_func:
+    - csep.plots.plot_consistency_test:
+        plot_args:
+          code: "import numpy\nimport matplotlib.ticker as tick\nfrom matplotlib.lines\
+            \ import Line2D\nimport seaborn\nseaborn.set_style(\"white\"\
+            , {\"axes.facecolor\": \".9\", 'font.family': 'Ubuntu'})\n\n\
+            for i, j in enumerate(results):\n    ax.plot(numpy.mean(j.test_distribution),\
+            \ len(results) - i - 1, 'ko', markersize=4)\n    ax.xaxis.set_major_locator(tick.MaxNLocator(integer=True))\n\
+            legend_elements = [Line2D([0], [0], marker='o', lw=0, label='Sim.\
+            \ expected value',\n                          color='k', markersize=2),\n\
+            \                   Line2D([0], [0], color='k', lw=1, label='Sim.\
+            \ 95% conf.'),\n                   Line2D([0], [1], color='green',\
+            \ marker='s', lw=0, markersize=4, label='Obs. Likelihood (passes)'),\n\
+            \                   Line2D([0], [1], color='red', marker='o',\
+            \ lw=0, markersize=4, label='Obs. Likelihood (fails)')]\nax.legend(handles=legend_elements,\
+            \ loc='lower left', fontsize=9)\n"
+        plot_kwargs:
+          one_sided_lower: true
+          title: $\mathcal{S}$-test
+          title_fontsize: 16
+          figsize:
+          - 5
+          - 6
+          xlabel: Spatial log-likelihood
+          linewidth: 0.5
+          capsize: 0
+- Poisson_M:
+    func_kwargs:
+      seed: 23
+      num_simulations: 1000
+    func: csep.core.poisson_evaluations.magnitude_test
+    plot_func:
+    - csep.plots.plot_consistency_test:
+        plot_args:
+          code: "import numpy\nimport matplotlib.ticker as tick\nfrom matplotlib.lines\
+            \ import Line2D\nimport seaborn\nseaborn.set_style(\"white\"\
+            , {\"axes.facecolor\": \".9\", 'font.family': 'Ubuntu'})\n\n\
+            for i, j in enumerate(results):\n    ax.plot(numpy.mean(j.test_distribution),\
+            \ len(results) - i - 1, 'ko', markersize=4)\n    ax.xaxis.set_major_locator(tick.MaxNLocator(integer=True))\n\
+            legend_elements = [Line2D([0], [0], marker='o', lw=0, label='Sim.\
+            \ expected value',\n                          color='k', markersize=2),\n\
+            \                   Line2D([0], [0], color='k', lw=1, label='Sim.\
+            \ 95% conf.'),\n                   Line2D([0], [1], color='green',\
+            \ marker='s', lw=0, markersize=4, label='Obs. Likelihood (passes)'),\n\
+            \                   Line2D([0], [1], color='red', marker='o',\
+            \ lw=0, markersize=4, label='Obs. Likelihood (fails)')]\nax.legend(handles=legend_elements,\
+            \ loc='lower left', fontsize=9)\n"
+        plot_kwargs:
+          one_sided_lower: true
+          title: $\mathcal{M}$-test
+          title_fontsize: 16
+          figsize:
+          - 5
+          - 6
+          xlabel: Magnitude log-likelihood
+          linewidth: 0.5
+          capsize: 0
+- Poisson_T:
+    ref_model: SEIFA13
+    func: csep.core.poisson_evaluations.paired_t_test
+    plot_func:
+    - csep.plots.plot_comparison_test:
+        plot_args:
+          code: "import numpy\nimport matplotlib.transforms as mtransforms\n\
+            \nnames = [r.sim_name[0] for r in results]\n\ndef grp(n):\n\
+            \    if n.startswith(\"FSM20\"):\n        return \"ESHM20 Fault\
+            \ + Background\"\n    if n.startswith(\"ASM20\"):\n        return\
+            \ \"ESHM20 Area Source\"\n    return \"ESHM13\"\n\ngroups =\
+            \ []\nfor i, n in enumerate(names):\n    g = grp(n)\n    if\
+            \ groups and groups[-1][0] == g:\n        groups[-1][2] = i\n\
+            \    else:\n        groups.append([g, i, i])\n\nfig = ax.get_figure()\n\
+            fig.canvas.draw()\n\nfigtr = fig.transFigure.inverted()\nys\
+            \ = []\nfor t in ax.get_xticklabels():\n    ys.append(figtr.transform(t.get_window_extent())[0][1])\n\
+            ylab = min(ys)\nneed = 0.075 - ylab\nif need > 0:\n    pos =\
+            \ ax.get_position()\n    ax.set_position([pos.x0, pos.y0 + need,\
+            \ pos.width, pos.height - need])\n    fig.canvas.draw()\n\n\
+            inv = ax.transAxes.inverted()\nys = []\nfor t in ax.get_xticklabels():\n\
+            \    ys.append(inv.transform(t.get_window_extent())[0][1])\n\
+            y0 = min(ys) - 0.015\ntrans = mtransforms.blended_transform_factory(ax.transData,\
+            \ ax.transAxes)\ntick = 0.012\n\nfor label_, i0, i1 in groups:\n\
+            \    x0, x1 = i0 - 0.35, i1 + 0.35\n    ax.plot([x0, x0, x1,\
+            \ x1], [y0 + tick, y0, y0, y0 + tick],\n            color=\"\
+            black\", linewidth=1.0, transform=trans, clip_on=False)\n  \
+            \  ax.text((x0 + x1) / 2, y0 - 0.01, label_, ha=\"center\",\
+            \ va=\"top\",\n            transform=trans, fontsize=10)"
+        plot_kwargs:
+          title: $T$-test
+          title_fontsize: 16
+          figsize:
+          - 8
+          - 6
+          ylabel: Information Gain / EQ
