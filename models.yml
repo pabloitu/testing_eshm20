@@ -1,36 +1,47 @@
 - SEIFA13:
-      path: models/SEIFA_13
-      format: csep
-      db_type: hdf5
-      filename: seifa_model.csv
-- FSBG:
-    path: models/FSBG
-    format: csep
-    db_type: hdf5
+    path: eshm_13/seifa_2013.csv
+    fmt: csv
+    doi: 10.1007/s10518-015-9795-1
+    forecast_unit: 1
+- FSBG13:
+    path: eshm_13/fsbg_2013.csv
+    fmt: csv
+    doi: 10.1007/s10518-015-9795-1
+    forecast_unit: 1
+- ASM13:
+    path: eshm_13/asm_2013.csv
+    fmt: csv
+    doi: 10.1007/s10518-015-9795-1
+    forecast_unit: 1
+- FSM20:
+    path: eshm_20/
+    fmt: csv
+    doi: 10.12686/a15
+    forecast_unit: 1
     flavours:
-        SRU_MU: fs_ver09e_model_aGR_SRU_MU_fMthr.csv
-        SRU_ML: fs_ver09e_model_aGR_SRU_ML_fMthr.csv
-        SRU_MA: fs_ver09e_model_aGR_SRU_MA_fMthr.csv
-        SRL_MU: fs_ver09e_model_aGR_SRL_MU_fMthr.csv
-        SRL_ML: fs_ver09e_model_aGR_SRL_ML_fMthr.csv
-        SRL_MA: fs_ver09e_model_aGR_SRL_MA_fMthr.csv
-        SRA_MU: fs_ver09e_model_aGR_SRA_MU_fMthr.csv
-        SRA_ML: fs_ver09e_model_aGR_SRA_ML_fMthr.csv
-        SRA_MA: fs_ver09e_model_aGR_SRA_MA_fMthr.csv
-- AS:
-    path: models/AS
-    format: csep
-    db_type: hdf5
+      SRU_MU: fs_ver09e_model_aGR_SRU_MU_fMthr.csv
+      SRU_ML: fs_ver09e_model_aGR_SRU_ML_fMthr.csv
+      SRU_MA: fs_ver09e_model_aGR_SRU_MA_fMthr.csv
+      SRL_MU: fs_ver09e_model_aGR_SRL_MU_fMthr.csv
+      SRL_ML: fs_ver09e_model_aGR_SRL_ML_fMthr.csv
+      SRL_MA: fs_ver09e_model_aGR_SRL_MA_fMthr.csv
+      SRA_MU: fs_ver09e_model_aGR_SRA_MU_fMthr.csv
+      SRA_ML: fs_ver09e_model_aGR_SRA_ML_fMthr.csv
+      SRA_MA: fs_ver09e_model_aGR_SRA_MA_fMthr.csv
+- ASM20:
+    path: eshm_20/
+    fmt: csv
+    doi: 10.12686/a15
     flavours:
-        Pareto_Mc_upp: asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_upp.csv
-        Pareto_Mc_mid: asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_mid.csv
-        Pareto_Mc_low: asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_low.csv
-        TGR_mid_Mmax_upp: asm_ver12e_winGT_fs017_mid_abgrs_maxmag_upp.csv
-        TGR_mid_Mmax_mid: asm_ver12e_winGT_fs017_mid_abgrs_maxmag_mid.csv
-        TGR_mid_Mmax_low: asm_ver12e_winGT_fs017_mid_abgrs_maxmag_low.csv
-        TGR_lo_Mmax_upp: asm_ver12e_winGT_fs017_lo_abgrs_maxmag_upp.csv
-        TGR_lo_Mmax_mid: asm_ver12e_winGT_fs017_lo_abgrs_maxmag_mid.csv
-        TGR_lo_Mmax_low: asm_ver12e_winGT_fs017_lo_abgrs_maxmag_low.csv
-        TGR_hi_Mmax_upp: asm_ver12e_winGT_fs017_hi_abgrs_maxmag_upp.csv
-        TGR_hi_Mmax_mid: asm_ver12e_winGT_fs017_hi_abgrs_maxmag_mid.csv
-        TGR_hi_Mmax_low: asm_ver12e_winGT_fs017_hi_abgrs_maxmag_low.csv
+      Pareto_Mc_upp: asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_upp.csv
+      Pareto_Mc_mid: asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_mid.csv
+      Pareto_Mc_low: asm_ver12e_winGT_fs017_pareto_abgrs_cornermag_low.csv
+      TGR_mid_Mmax_upp: asm_ver12e_winGT_fs017_mid_abgrs_maxmag_upp.csv
+      TGR_mid_Mmax_mid: asm_ver12e_winGT_fs017_mid_abgrs_maxmag_mid.csv
+      TGR_mid_Mmax_low: asm_ver12e_winGT_fs017_mid_abgrs_maxmag_low.csv
+      TGR_lo_Mmax_upp: asm_ver12e_winGT_fs017_lo_abgrs_maxmag_upp.csv
+      TGR_lo_Mmax_mid: asm_ver12e_winGT_fs017_lo_abgrs_maxmag_mid.csv
+      TGR_lo_Mmax_low: asm_ver12e_winGT_fs017_lo_abgrs_maxmag_low.csv
+      TGR_hi_Mmax_upp: asm_ver12e_winGT_fs017_hi_abgrs_maxmag_upp.csv
+      TGR_hi_Mmax_mid: asm_ver12e_winGT_fs017_hi_abgrs_maxmag_mid.csv
+      TGR_hi_Mmax_low: asm_ver12e_winGT_fs017_hi_abgrs_maxmag_low.csv

@@ -1,83 +1,126 @@
-# Floating Experiment - EFEHR20 <a name="global_earthquake_forecasting_experiment_--_quadtree"></a>
+# ESHM20 Testing — Experiment Report
 
-# Table of Contents
-   1. [Objectives](#objectives)
-   1. [ISC gCMT Authoritative Catalog](#isc_gcmt_authoritative_catalog)
-   1. [Results](#results)
-      1. [Poisson_N](#poisson_n)
-      1. [Poisson_S](#poisson_s)
-      1. [Poisson_M](#poisson_m)
-      1. [Poisson_CL](#poisson_cl)
-      1. [Binary_S](#binary_s)
-      1. [Poisson_T](#poisson_t)
-## Objectives <a name="objectives"></a>
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21497355.svg)](https://doi.org/10.5281/zenodo.21497355)
 
+Prospective and pseudo-prospective evaluation of the earthquake rate models of the 2020 European Seismic Hazard Model (ESHM20), carried out with the Collaboratory for the Study of Earthquake Predicability (CSEP) testing framework and the software [floatCSEP](https://github.com/cseptesting/floatcsep).
 
-* Describe the predictive skills of posited hypothesis about seismogenesis with earthquakes of M4.75+ independent observations in Europe.
-* Identify the methods and geophysical datasets that lead to the highest information gains in the latest release of the European Seismic Hazard Model.
+- **Authors:** Pablo Iturrieta, José A. Bayona, Maximilian J. Werner, Fabrice Cotton, Graeme Weatherill, Laurentiu Danciu
+- **Evaluation catalog:** EMEC ([10.5880/GFZ.EMEC.2021.001](https://doi.org/10.5880/GFZ.EMEC.2021.001)), provided by GFZ
+- **Experiment class:** Pseudo-Prospective / Prospective, Time-Independent
+- **Software:** floatCSEP v0.5.2, pyCSEP v0.8.0
+- **Last run:** 2026-07-11
+- **License:** CC BY 4.0
 
-## ISC gCMT Authoritative Catalog  <a name="isc_gcmt_authoritative_catalog"></a>
+## Installation
 
+```bash
+conda env create -f environment.yml
+conda activate testing_eshm20
+```
 
+ Alternatively, in an existing Python 3.12 environment:
 
-![](results/20220101T000000/catalog/catalog.png)
+```bash
+pip install floatcsep==0.5.2
+```
 
+For an exact reconstruction of the environment install from the lock file instead:
 
-The authoritative evaluation data is the full Global CMT catalog (Ekström et al. 2012). We confine the hypocentral depths of earthquakes in training and testing datasets to a maximum of 70km. The plot shows the catalog for the testing period which ranges from 2015-01-01 00:00:00 until 2022-01-01 00:00:00. Earthquakes are filtered above Mw 4.7. Black circles depict individual earthquakes with its radius proportional to the magnitude.
-## Results <a name="results"></a>
+```bash
+pip install -r requirements-lock.txt
+```
 
-We apply the following tests to each of the forecasts considered in this gefe. More information regarding the tests can be found [here](https://docs.cseptesting.org/getting_started/theory.html).
-* Poisson_N
-* Poisson_S
-* Poisson_M
-* Poisson_CL
-* Binary_S
-* Poisson_T
-### Poisson_N  <a name="poisson_n"></a>
+## Running the experiment
 
+All commands are run from the repository root and take the experiment configuration as argument:
 
+```bash
+floatcsep run config.yml          # run the experiment end-to-end from scratch
+floatcsep plot config.yml         # (re-)create figures and this report
+floatcsep view config.yml         # deploy the interactive dashboard
+floatcsep reproduce config.yml    # re-run and compare against the archived results
+```
 
-![](results/20220101T000000/figures/Poisson_N.png)
+## Where to find the results
 
+All output is written to the `results/` directory:
 
+- **Report:** `results/report.md` and `results/report.pdf`.
+- **Main catalog figures:** `results/catalog.png` (map) and `results/events.png` (time series).
+- **Per-window outputs** in `results/2015-01-01_2022-01-01/`:
+  - `catalog/test_catalog.json` — the test catalog used for the evaluations.
+  - `evaluations/` — individual test results as JSON.
+  - `figures/` — evaluation figures and forecast maps.
+- **Reproducibility:** `floatcsep reproduce config.yml` writes a comparison against these archived results, including a `reproducibility_report.md`.
 
-### Poisson_S  <a name="poisson_s"></a>
+---
 
-
-
-![](results/20220101T000000/figures/Poisson_S.png)
-
-
-
-### Poisson_M  <a name="poisson_m"></a>
-
-
-
-![](results/20220101T000000/figures/Poisson_M.png)
-
-
-
-### Poisson_CL  <a name="poisson_cl"></a>
-
-
-
-![](results/20220101T000000/figures/Poisson_CL.png)
+## Table of Contents
+1. [Experiment metadata](#experiment_metadata)
+1. [Objectives](#objectives)
+1. [Authoritative Data](#authoritative_data)
+1. [Test results](#test_results)
 
 
-
-### Binary_S  <a name="binary_s"></a>
-
+## Experiment metadata <a id="experiment_metadata"></a>
 
 
-![](results/20220101T000000/figures/Binary_S.png)
+- **Start date:** 2015-01-01 00:00:00
+- **End date:** 2022-01-01 00:00:00
+- **Class:** Time-Independent
+- **Magnitude range:** 4.9 ≤ Mw ≤ 8.9
+- **Region:** region_europe.txt
+- **Catalog:** emec_catalog.json
+- **Models:** SEIFA13, FSBG13, ASM13, FSM20@SRU_MU, FSM20@SRU_ML, FSM20@SRU_MA, FSM20@SRL_MU, FSM20@SRL_ML, FSM20@SRL_MA, FSM20@SRA_MU, FSM20@SRA_ML, FSM20@SRA_MA, ASM20@Pareto_Mc_upp, ASM20@Pareto_Mc_mid, ASM20@Pareto_Mc_low, ASM20@TGR_mid_Mmax_upp, ASM20@TGR_mid_Mmax_mid, ASM20@TGR_mid_Mmax_low, ASM20@TGR_lo_Mmax_upp, ASM20@TGR_lo_Mmax_mid, ASM20@TGR_lo_Mmax_low, ASM20@TGR_hi_Mmax_upp, ASM20@TGR_hi_Mmax_mid, ASM20@TGR_hi_Mmax_low
+- **Evaluations:** Poisson_N, Poisson_S, Poisson_M, Poisson_T
+
+## Objectives <a id="objectives"></a>
+
+
+* Ensure transparent and reproducible evaluation of submitted models.
+* Compare forecasts against authoritative seismicity observations.
+
+## Authoritative Data <a id="authoritative_data"></a>
+
+
+### Input catalog  <a id="input_catalog"></a>
 
 
 
-### Poisson_T  <a name="poisson_t"></a>
+<img src="results/catalog.png" class="figure-img" style="display:block; margin:0.5em auto; width:90%; max-width:100%; height:auto;" width="720"/>
+<img src="results/events.png" class="figure-img" style="display:block; margin:0.5em auto; width:90%; max-width:100%; height:auto;" width="720"/>
+
+
+Evaluation catalog from 2015-01-01 00:00:00 until 2022-01-01 00:00:00. Earthquakes are filtered above Mw 4.9.
+## Test results <a id="test_results"></a>
+
+
+### Poisson_N  <a id="poisson_n"></a>
 
 
 
-![](results/20220101T000000/figures/Poisson_T.png)
+<img src="results/2015-01-01_2022-01-01/figures/Poisson_N.png" class="figure-img" style="display:block; margin:0.5em auto; width:75%; max-width:100%; height:auto;" width="600"/>
 
 
 
+### Poisson_S  <a id="poisson_s"></a>
+
+
+
+<img src="results/2015-01-01_2022-01-01/figures/Poisson_S.png" class="figure-img" style="display:block; margin:0.5em auto; width:75%; max-width:100%; height:auto;" width="600"/>
+
+
+
+### Poisson_M  <a id="poisson_m"></a>
+
+
+
+<img src="results/2015-01-01_2022-01-01/figures/Poisson_M.png" class="figure-img" style="display:block; margin:0.5em auto; width:75%; max-width:100%; height:auto;" width="600"/>
+
+
+
+### Poisson_T  <a id="poisson_t"></a>
+
+
+
+<img src="results/2015-01-01_2022-01-01/figures/Poisson_T.png" class="figure-img" style="display:block; margin:0.5em auto; width:75%; max-width:100%; height:auto;" width="600"/>

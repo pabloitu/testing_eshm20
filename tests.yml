@@ -1,67 +1,159 @@
 - Poisson_N:
-      func: poisson_evaluations.number_test
-      func_kwargs: {}
-      plot_func: plot_poisson_consistency_test
-      plot_args:
-          title: $N-$test
-          xlabel: Event counts
-          figsize: !!python/tuple [ 4, 4 ]
-          title_fontsize: 16
+    func: poisson_evaluations.number_test
+    plot_func:
+      - plot_consistency_test:
+          plot_kwargs:
+            title: $\mathcal{N}$-test
+            title_fontsize: 16
+            figsize: !!python/tuple [ 5, 6 ]
+            xlabel: Event counts
+            linewidth: 0.5
+            capsize: 0
+          plot_args:
+            code: |
+              import numpy
+              import matplotlib.ticker as tick
+              from matplotlib.lines import Line2D
+              import seaborn
+              import matplotlib.pyplot as plt
+              seaborn.set_style("white", {"axes.facecolor": ".9", 'font.family': 'Ubuntu'})
+              plt.rcParams.update({'xtick.bottom': True, 'axes.labelweight': 'bold',
+                                   'xtick.labelsize': 8, 'ytick.labelsize': 8,
+                                   'legend.fontsize': 9})
+              ax.axvline(results[0].observed_statistic, color='black', linewidth=1, linestyle='--')
+              ax.text(results[0].observed_statistic + 30, len(results) - 4.8, 'Events in 7 yrs.', rotation=90)
+              ax.set_xlim([0, ax.get_xlim()[1]])
+              for i, j in enumerate(results):
+                  ax.plot(j.test_distribution[1], len(results) - i - 1, 'ko', markersize=4)
+              ax.xaxis.set_major_locator(tick.MaxNLocator(integer=True))
+              legend_elements = [Line2D([0], [0], marker='o', lw=0, label='Mean rate', color='k', markersize=5),
+                                 Line2D([0], [0], color='k', lw=1, label='95% conf.'),
+                                 Line2D([0], [1], color='k', ls='--', lw=1, label='Obs. events')]
+              ax.legend(handles=legend_elements, loc='lower right')
+
 - Poisson_S:
-      func: poisson_evaluations.spatial_test
-      func_kwargs: {}
-      plot_func: plot_poisson_consistency_test
-      plot_args:
-          title: $S-$test
-          xlabel: Spatial Log-Likelihood
-          figsize: !!python/tuple [4, 4]
-          title_fontsize: 16
-      plot_kwargs:
-          normalize: True
-          one_sided_lower: True
+    func: poisson_evaluations.spatial_test
+    func_kwargs:
+      seed: 23
+      num_simulations: 1000
+    plot_func:
+      - plot_consistency_test:
+          plot_kwargs:
+            one_sided_lower: True
+            title: $\mathcal{S}$-test
+            title_fontsize: 16
+            figsize: !!python/tuple [ 5, 6 ]
+            xlabel: Spatial log-likelihood
+            linewidth: 0.5
+            capsize: 0
+          plot_args:
+            code: |
+              import numpy
+              import matplotlib.ticker as tick
+              from matplotlib.lines import Line2D
+              import seaborn
+              seaborn.set_style("white", {"axes.facecolor": ".9", 'font.family': 'Ubuntu'})
+
+              for i, j in enumerate(results):
+                  ax.plot(numpy.mean(j.test_distribution), len(results) - i - 1, 'ko', markersize=4)
+                  ax.xaxis.set_major_locator(tick.MaxNLocator(integer=True))
+              legend_elements = [Line2D([0], [0], marker='o', lw=0, label='Sim. expected value',
+                                        color='k', markersize=2),
+                                 Line2D([0], [0], color='k', lw=1, label='Sim. 95% conf.'),
+                                 Line2D([0], [1], color='green', marker='s', lw=0, markersize=4, label='Obs. Likelihood (passes)'),
+                                 Line2D([0], [1], color='red', marker='o', lw=0, markersize=4, label='Obs. Likelihood (fails)')]
+              ax.legend(handles=legend_elements, loc='lower left', fontsize=9)
+
 - Poisson_M:
-      func: poisson_evaluations.magnitude_test
-      func_kwargs: {}
-      plot_func: plot_poisson_consistency_test
-      plot_args:
-          title: $M-$test
-          xlabel: Magnitude Log-Likelihood
-          figsize: !!python/tuple [4, 4]
-          title_fontsize: 16
-      plot_kwargs:
-          normalize: True
-          one_sided_lower: True
-- Poisson_CL:
-      func: poisson_evaluations.conditional_likelihood_test
-      func_kwargs: {}
-      plot_func: plot_poisson_consistency_test
-      plot_args:
-          title: $L_{N}-$test
-          xlabel: Log-Likelihood
-          figsize: !!python/tuple [4, 4]
-          title_fontsize: 16
-      plot_kwargs:
-          normalize: True
-          one_sided_lower: True
-- Binary_S:
-      func: binomial_spatial_test
-      func_kwargs: {}
-      plot_func: plot_poisson_consistency_test
-      plot_args:
-          title: $S-$Binary Test
-          xlabel: Spatial Log-Likelihood
-          figsize: !!python/tuple [ 4, 4 ]
-          title_fontsize: 16
-      plot_kwargs:
-          normalize: True
-          one_sided_lower: True
+    func: poisson_evaluations.magnitude_test
+    func_kwargs:
+      seed: 23
+      num_simulations: 1000
+    plot_func:
+      - plot_consistency_test:
+          plot_kwargs:
+            one_sided_lower: True
+            title: $\mathcal{M}$-test
+            title_fontsize: 16
+            figsize: !!python/tuple [ 5, 6 ]
+            xlabel: Magnitude log-likelihood
+            linewidth: 0.5
+            capsize: 0
+          plot_args:
+            code: |
+              import numpy
+              import matplotlib.ticker as tick
+              from matplotlib.lines import Line2D
+              import seaborn
+              seaborn.set_style("white", {"axes.facecolor": ".9", 'font.family': 'Ubuntu'})
+
+              for i, j in enumerate(results):
+                  ax.plot(numpy.mean(j.test_distribution), len(results) - i - 1, 'ko', markersize=4)
+                  ax.xaxis.set_major_locator(tick.MaxNLocator(integer=True))
+              legend_elements = [Line2D([0], [0], marker='o', lw=0, label='Sim. expected value',
+                                        color='k', markersize=2),
+                                 Line2D([0], [0], color='k', lw=1, label='Sim. 95% conf.'),
+                                 Line2D([0], [1], color='green', marker='s', lw=0, markersize=4, label='Obs. Likelihood (passes)'),
+                                 Line2D([0], [1], color='red', marker='o', lw=0, markersize=4, label='Obs. Likelihood (fails)')]
+              ax.legend(handles=legend_elements, loc='lower left', fontsize=9)
+
 - Poisson_T:
-      func: poisson_evaluations.paired_t_test
-      func_kwargs: {}
-      plot_func: plot_comparison_test
-      ref_model: SEIFA13
-      plot_args:
-          title: $T-$test
-          figsize: !!python/tuple [ 6, 4 ]
-          title_fontsize: 16
-          ylabel: Information Gain / EQ
+    func: poisson_evaluations.paired_t_test
+    ref_model: SEIFA13
+    plot_func:
+      - plot_comparison_test:
+          plot_kwargs:
+            title: $T$-test
+            title_fontsize: 16
+            figsize: !!python/tuple [ 8, 6 ]
+            ylabel: Information Gain / EQ
+          plot_args:
+            code: |
+              import numpy
+              import matplotlib.transforms as mtransforms
+
+              names = [r.sim_name[0] for r in results]
+
+              def grp(n):
+                  if n.startswith("FSM20"):
+                      return "ESHM20 Fault + Background"
+                  if n.startswith("ASM20"):
+                      return "ESHM20 Area Source"
+                  return "ESHM13"
+
+              groups = []
+              for i, n in enumerate(names):
+                  g = grp(n)
+                  if groups and groups[-1][0] == g:
+                      groups[-1][2] = i
+                  else:
+                      groups.append([g, i, i])
+
+              fig = ax.get_figure()
+              fig.canvas.draw()
+
+              figtr = fig.transFigure.inverted()
+              ys = []
+              for t in ax.get_xticklabels():
+                  ys.append(figtr.transform(t.get_window_extent())[0][1])
+              ylab = min(ys)
+              need = 0.075 - ylab
+              if need > 0:
+                  pos = ax.get_position()
+                  ax.set_position([pos.x0, pos.y0 + need, pos.width, pos.height - need])
+                  fig.canvas.draw()
+
+              inv = ax.transAxes.inverted()
+              ys = []
+              for t in ax.get_xticklabels():
+                  ys.append(inv.transform(t.get_window_extent())[0][1])
+              y0 = min(ys) - 0.015
+              trans = mtransforms.blended_transform_factory(ax.transData, ax.transAxes)
+              tick = 0.012
+
+              for label_, i0, i1 in groups:
+                  x0, x1 = i0 - 0.35, i1 + 0.35
+                  ax.plot([x0, x0, x1, x1], [y0 + tick, y0, y0, y0 + tick],
+                          color="black", linewidth=1.0, transform=trans, clip_on=False)
+                  ax.text((x0 + x1) / 2, y0 - 0.01, label_, ha="center", va="top",
+                          transform=trans, fontsize=10)

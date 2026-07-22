@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this experiment or its results, please cite the Zenodo release."
+title: "testing_eshm20: Prospective evaluation of the ESHM20 earthquake rate model for Europe"
+type: software
+license: "CC-BY-4.0"
+
+repository-code: "https://github.com/pabloitu/testing_eshm20"
+
+version: "2.0.0"
+doi: "10.5281/zenodo.21497355"
+date-released: "2026-07-22"
+
+keywords:
+  - seismology
+  - earthquake forecasting
+  - forecast testing
+  - CSEP
+  - ESHM20
+  - Europe
+
+authors:
+  - family-names: "Iturrieta"
+    given-names: "Pablo"
+    orcid: "https://orcid.org/0000-0002-4787-1343"
+    affiliation: "GFZ Helmholtz Centre for Geosciences, Potsdam, Germany"
+
+  - family-names: "Bayona"
+    given-names: "José A."
+    orcid: "https://orcid.org/0000-0002-3026-0327"
+    affiliation: "School of Earth Sciences, University of Bristol, Bristol, United Kingdom"
+
+  - family-names: "Werner"
+    given-names: "Maximilian J."
+    orcid: "https://orcid.org/0000-0002-2430-2631"
+    affiliation: "School of Earth Sciences, University of Bristol, Bristol, United Kingdom"
+
+  - family-names: "Cotton"
+    given-names: "Fabrice"
+    orcid: "https://orcid.org/0000-0002-9242-3996"
+    affiliation: "GFZ Helmholtz Centre for Geosciences, Potsdam, Germany"
+
+  - family-names: "Weatherill"
+    given-names: "Graeme"
+    orcid: "https://orcid.org/0000-0001-9347-2282"
+    affiliation: "GFZ Helmholtz Centre for Geosciences, Potsdam, Germany"
+
+  - family-names: "Danciu"
+    given-names: "Laurentiu"
+    orcid: "https://orcid.org/0000-0003-4086-8755"
+    affiliation: "Swiss Seismological Service at ETH Zürich, Zürich, Switzerland"

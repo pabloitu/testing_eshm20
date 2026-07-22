@@ -1,0 +1,65 @@
+{
+  "title": "testing_eshm20: Prospective evaluation of the ESHM20 earthquake rate model for Europe",
+  "description": "Reproducibility package for the prospective and pseudo-prospective evaluation of the earthquake rate models underlying the 2020 European Seismic Hazard Model (ESHM20). The experiment tests grid-based forecasts for Europe (Mw 4.9+, 2015-2022) against the EMEC catalogue using testing framework of the Collaboratory for the Study of Earthquake Predictability (CSEP). The package contains the experiment configuration, forecast files, evaluation catalogue, test results, figures and reports.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "keywords": [
+    "seismology",
+    "earthquake forecasting",
+    "forecast testing",
+    "CSEP",
+    "ESHM20",
+    "Europe"
+  ],
+  "creators": [
+    {
+      "name": "Iturrieta, Pablo",
+      "orcid": "0000-0002-4787-1343",
+      "affiliation": "GFZ Helmholtz Centre for Geosciences, Potsdam, Germany"
+    },
+    {
+      "name": "Bayona, Jos\u00e9 A.",
+      "orcid": "0000-0002-3026-0327",
+      "affiliation": "School of Earth Sciences, University of Bristol, Bristol, United Kingdom"
+    },
+    {
+      "name": "Werner, Maximilian J.",
+      "orcid": "0000-0002-2430-2631",
+      "affiliation": "School of Earth Sciences, University of Bristol, Bristol, United Kingdom"
+    },
+    {
+      "name": "Cotton, Fabrice",
+      "orcid": "0000-0002-9242-3996",
+      "affiliation": "GFZ Helmholtz Centre for Geosciences, Potsdam, Germany"
+    },
+    {
+      "name": "Weatherill, Graeme",
+      "orcid": "0000-0001-9347-2282",
+      "affiliation": "GFZ Helmholtz Centre for Geosciences, Potsdam, Germany"
+    },
+    {
+      "name": "Danciu, Laurentiu",
+      "orcid": "0000-0003-4086-8755",
+      "affiliation": "Swiss Seismological Service at ETH Z\u00fcrich, Z\u00fcrich, Switzerland"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/pabloitu/testing_eshm20",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5880/GFZ.EMEC.2021.001",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://github.com/cseptesting/floatcsep",
+      "relation": "requires",
+      "resource_type": "software"
+    }
+  ]
+}
