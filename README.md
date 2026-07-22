@@ -58,6 +58,7 @@ All output is written to the `results/` directory:
 ## Table of Contents
 1. [Experiment metadata](#experiment_metadata)
 1. [Objectives](#objectives)
+1. [Forecast models](#forecast_models)
 1. [Authoritative Data](#authoritative_data)
 1. [Test results](#test_results)
 
@@ -79,6 +80,22 @@ All output is written to the `results/` directory:
 
 * Ensure transparent and reproducible evaluation of submitted models.
 * Compare forecasts against authoritative seismicity observations.
+
+## Forecast models <a id="forecast_models"></a>
+
+The forecasts under evaluation are the branches of the ESHM20 seismogenic source model logic tree, complemented by the three source models of its predecessor, the 2013 European Seismic Hazard Model (ESHM13).
+
+<img src="logic_tree_efehr20.png" class="figure-img" style="display:block; margin:0.5em auto; width:85%; max-width:100%; height:auto;" width="680"/>
+
+The ESHM20 source model combines two main branches with equal weight:
+
+- **Area Source model (`ASM20`):** earthquake rates are defined within seismotectonic zones. The epistemic uncertainty in the magnitude-frequency distribution (MFD) is captured by two alternative forms: a **Pareto MFD**, sampled at three corner magnitudes (`ASM20@Pareto_Mc_upp/mid/low`), and a **double truncated Gutenberg–Richter MFD**, sampled at three activity-rate pairs (a, b: `hi`, `mid`, `lo`) combined with three maximum-magnitude branches (`Mmax_upp/mid/low`), yielding the nine `ASM20@TGR_*` forecasts. In total, 12 area-source branches.
+
+- **Faults and Smoothed-Seismicity model (`FSM20`):** earthquake rates are derived from mapped fault sources combined with a smoothed-seismicity background. Its epistemic uncertainty is sampled through three fault slip-rate branches (`SRL`/`SRA`/`SRU`: lower/mean/upper) combined with three maximum-magnitude branches (`ML`/`MA`/`MU`: lower/mean/upper), yielding the nine `FSM20@SR*_M*` forecasts.
+
+The three ESHM13 source models serve as reference points from the previous generation of the European hazard model: `ASM13` (area sources), `FSBG13` (fault sources and background), and `SEIFA13` (kernel-smoothed seismicity). `SEIFA13` is used as the reference model in the comparative T-test.
+
+Rather than evaluating only the weighted-mean rate forecast, each terminal branch enters the experiment as an individual forecast. This allows testing not only the overall consistency of the source model with the observed seismicity, but also the relative information gain of each epistemic choice within the logic tree. However, work is pending to test the entire spread of the epistemic uncertainty. 
 
 ## Authoritative Data <a id="authoritative_data"></a>
 
