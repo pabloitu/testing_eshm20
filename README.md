@@ -141,3 +141,16 @@ Evaluation catalog from 2015-01-01 00:00:00 until 2022-01-01 00:00:00. Earthquak
 
 
 <img src="results/2015-01-01_2022-01-01/figures/Poisson_T.png" class="figure-img" style="display:block; margin:0.5em auto; width:75%; max-width:100%; height:auto;" width="600"/>
+
+
+## Support
+
+<p align="center">
+  <img src=".static/logos/geoinquire_logo.png" alt="Geo-INQUIRE logo" height="55">&nbsp;&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset=".static/logos/efehr_logo_white.png"><img src=".static/logos/efehr_logo_dark.png" alt="EFEHR logo" height="50"></picture>&nbsp;&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset=".static/logos/gfz_logo_white.png"><img src=".static/logos/gfz_logo_dark.png" alt="GFZ logo" height="38"></picture>&nbsp;&nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset=".static/logos/ethz_logo_white.png"><img src=".static/logos/ethz_logo_dark.png" alt="ETH Zurich logo" height="26"></picture>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src=".static/logos/eu_logo.png" alt="European Union flag" height="45">
+</p>
+
+- The work in this repository has received funding from the European Union's Horizon research and innovation programme under grant agreement No. 101058518 of the project [Geo-INQUIRE](https://www.geo-inquire.eu/). Geo-INQUIRE is funded by the European Commission under project number 101058518 within the HORIZON-INFRA-2021-SERV-01 call.
